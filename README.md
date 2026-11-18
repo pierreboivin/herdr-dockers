@@ -7,6 +7,7 @@ Dans la popup :
 - **logs** ouvre un onglet avec `docker logs -f`.
 - **shell** ouvre un onglet avec `docker exec -it` (bash si disponible, sinon sh).
 - **redémarrer** / **démarrer** lance `docker restart` ou `docker start`.
+- **arrêter** arrête le conteneur et **tout arrêter** arrête les conteneurs actifs du groupe. Les deux désactivent d'abord le redémarrage automatique (`docker update --restart=no`), pour qu'un conteneur réglé sur `restart: always` reste fermé. Un `docker compose up` remet la politique du fichier Compose.
 - Un clic sur un port ouvre `http://localhost:<port>`.
 - « Afficher arrêtés » montre aussi les conteneurs arrêtés.
 
